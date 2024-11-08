@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Ingresados</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos</h1>
+    </header>
+<div class="container">
+    <h2>Informacion del Usuario</h2>
+    <div class="info">
+        <p><strong>Usuario:</strong> <span id="user"></span></p>
+        <p><strong>Password:</strong> <span id="password"></span></p>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2024. Todos los derechos reservados.</p>
+    </footer>
+
+
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("user").textContent = params.get("username");
+        document.getElementById("password").textContent = params.get("password");
+    </script>
+
+</body>
+</html>
